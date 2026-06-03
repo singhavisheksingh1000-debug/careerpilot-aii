@@ -29,4 +29,4 @@ Then open <http://localhost:4173>.
 
 ## Customize lead forms
 
-The lead-generation buttons currently use a placeholder Google Forms link. Search for `1FAIpQLScareerPilotAI` and replace each occurrence with your live Google Form URL.
+The HR toolkit and resume-review buttons use this Google Form URL: `https://docs.google.com/forms/d/e/1FAIpQLSeL6JgNxjXKhpouhCPausDl9qU_DFkttohgIUkwD1ryETE_pQ/viewform`. Replace that URL across the HTML files if the destination changes in the future.
