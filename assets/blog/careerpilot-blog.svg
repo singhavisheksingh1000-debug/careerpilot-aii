@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">CareerPilot AI career guide featured image</title>
+  <desc id="desc">Blue CareerPilot AI branded featured image for resume, interview, and job preparation blog posts.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7f3ff"/>
+      <stop offset="0.48" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#b9ddff"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0759d6"/>
+      <stop offset="1" stop-color="#0875e5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="96" r="138" fill="#d8ecff" opacity="0.9"/>
+  <circle cx="108" cy="540" r="160" fill="#d8ecff" opacity="0.75"/>
+  <rect x="92" y="88" width="1016" height="454" rx="42" fill="#fff" stroke="#d7e6f5" stroke-width="3"/>
+  <rect x="134" y="130" width="360" height="360" rx="32" fill="url(#card)"/>
+  <path d="M201 226h226M201 286h194M201 346h226M201 406h150" stroke="#fff" stroke-width="26" stroke-linecap="round" opacity="0.96"/>
+  <circle cx="442" cy="170" r="28" fill="#a9d6ff"/>
+  <text x="550" y="214" fill="#071b3a" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800">CareerPilot AI</text>
+  <text x="550" y="292" fill="#0759d6" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800">Career Guide</text>
+  <text x="550" y="358" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="30">Resume • Interview • Job Prep</text>
+  <rect x="550" y="405" width="330" height="64" rx="32" fill="#e9f3ff"/>
+  <text x="586" y="448" fill="#0759d6" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Read practical steps</text>
+</svg>
