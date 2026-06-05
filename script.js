@@ -12,3 +12,10 @@ calc('interview',d=>{const avg=['communication','confidence','knowledge','exampl
 calc('notice',d=>{const start=new Date(d.start);start.setDate(start.getDate()+(+d.days||0));return`Your estimated last working day is <strong>${start.toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'})}</strong>.`});
 const checklist=$('#resume-checklist');if(checklist){const checks=$$('input[type=checkbox]',checklist), update=()=>{const done=checks.filter(c=>c.checked).length;store('careerpilot-resume-checklist',checks.map(c=>c.checked));$('[data-output]',checklist).innerHTML=`Resume checklist progress: <strong>${done}/${checks.length}</strong> completed.`};get('careerpilot-resume-checklist',[]).forEach((v,i)=>{if(checks[i])checks[i].checked=v});checks.forEach(c=>c.addEventListener('change',update));update()}
 $$('[data-word]').forEach(el=>{const letters='INTERVIEWEXCELSKILLSCAREERRESUMEJOBSALARYHRDATA'.repeat(3);el.innerHTML=[...letters.slice(0,100)].map(c=>`<span>${c}</span>`).join('')});
+
+const blogSearch=$('[data-blog-search]');
+if(blogSearch){
+  const input=$('[data-blog-search-input]',blogSearch), cards=$$('[data-post-card]'), count=$('[data-blog-result-count]'), empty=$('[data-blog-no-results]');
+  const filter=()=>{const q=(input.value||'').trim().toLowerCase();let shown=0;cards.forEach(card=>{const haystack=[card.dataset.title,card.dataset.category,card.dataset.summary].join(' ');const match=!q||haystack.includes(q);card.hidden=!match;if(match)shown++});if(count)count.textContent=`${shown} guide${shown===1?'':'s'} ${q?'found':'available'}`;if(empty)empty.hidden=shown!==0};
+  input.addEventListener('input',filter);filter();
+}
