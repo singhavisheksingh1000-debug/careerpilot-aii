@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/tools/ats-resume-checker",
+      "destination": "/ats-resume-checker/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/ats-resume-checker/",
+      "destination": "/ats-resume-checker/",
+      "permanent": true
+    }
+  ]
+}
