@@ -1,5 +1,24 @@
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 $('.nav-toggle')?.addEventListener('click',()=>$('.nav-links')?.classList.toggle('open'));
+
+const homeSlider=$('[data-home-slider]');
+if(homeSlider){
+  const slides=$$('[data-slider-slide]',homeSlider), dots=$$('[data-slider-dot]',homeSlider);
+  let current=0, timer;
+  const show=index=>{
+    current=(index+slides.length)%slides.length;
+    slides.forEach((slide,i)=>slide.classList.toggle('is-active',i===current));
+    dots.forEach((dot,i)=>dot.classList.toggle('is-active',i===current));
+  };
+  const stop=()=>{if(timer)clearInterval(timer)};
+  const start=()=>{stop();timer=setInterval(()=>show(current+1),4000)};
+  dots.forEach((dot,i)=>dot.addEventListener('click',()=>{show(i);start()}));
+  homeSlider.addEventListener('mouseenter',stop);
+  homeSlider.addEventListener('mouseleave',start);
+  homeSlider.addEventListener('touchstart',stop,{passive:true});
+  homeSlider.addEventListener('touchend',start,{passive:true});
+  start();
+}
 const store=(key,value)=>localStorage.setItem(key,JSON.stringify(value));
 const get=(key,fallback)=>JSON.parse(localStorage.getItem(key)||JSON.stringify(fallback));
 const cats=s=>s>=8?'Job Ready':s>=5?'Improving':'Beginner';
