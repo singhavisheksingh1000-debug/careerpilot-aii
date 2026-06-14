@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Graduate preparing for interview while recruiter reviews resumes</title>
+  <desc id="desc">Modern blue white and gold office scene with a student, recruiter, resume on laptop screen, and CareerPilot AII branding.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eaf4ff"/>
+      <stop offset="0.62" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fff4d2"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1"><stop stop-color="#0759d6"/><stop offset="1" stop-color="#0b8bf0"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#08234d" flood-opacity="0.18"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="1010" cy="95" r="120" fill="#f7c948" opacity=".22"/>
+  <circle cx="150" cy="585" r="170" fill="#0759d6" opacity=".08"/>
+  <rect x="70" y="70" width="1060" height="535" rx="34" fill="#fff" filter="url(#shadow)"/>
+  <rect x="70" y="70" width="1060" height="120" rx="34" fill="url(#blue)"/>
+  <text x="120" y="126" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#fff">HOW TO WRITE A RESUME SUMMARY</text>
+  <text x="120" y="164" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffe7a3">That Gets Interview Calls in 2026</text>
+  <g transform="translate(112,230)">
+    <rect x="0" y="170" width="970" height="36" rx="18" fill="#d7e6f8"/>
+    <rect x="86" y="50" width="330" height="230" rx="18" fill="#f8fbff" stroke="#bdd3ee" stroke-width="4"/>
+    <rect x="116" y="82" width="270" height="164" rx="10" fill="#08234d"/>
+    <rect x="136" y="102" width="230" height="124" rx="6" fill="#ffffff"/>
+    <text x="154" y="130" font-family="Arial" font-size="17" font-weight="700" fill="#0759d6">Professional Summary</text>
+    <rect x="154" y="150" width="190" height="8" rx="4" fill="#f7c948"/>
+    <rect x="154" y="171" width="165" height="8" rx="4" fill="#d7e6f8"/>
+    <rect x="154" y="193" width="205" height="8" rx="4" fill="#d7e6f8"/>
+    <path d="M221 246h60l16 34h-92z" fill="#08234d"/>
+    <rect x="172" y="278" width="174" height="12" rx="6" fill="#08234d"/>
+    <g transform="translate(475,60)">
+      <circle cx="82" cy="54" r="42" fill="#f2b48f"/>
+      <path d="M36 72c11-50 77-77 111-22 11 18 7 41-1 58-19-27-70-14-110-36z" fill="#08234d"/>
+      <rect x="43" y="108" width="80" height="92" rx="32" fill="#ffffff"/>
+      <path d="M0 244c7-72 45-112 84-112s78 40 86 112z" fill="#0759d6"/>
+      <path d="M60 138l24 47 24-47" fill="none" stroke="#f7c948" stroke-width="8" stroke-linecap="round"/>
+      <rect x="-15" y="242" width="200" height="22" rx="11" fill="#d7e6f8"/>
+    </g>
+    <g transform="translate(725,30)">
+      <circle cx="88" cy="62" r="40" fill="#d89672"/>
+      <path d="M42 64c8-48 82-60 100-6-34 5-66-2-100 6z" fill="#173c6e"/>
+      <path d="M12 250c10-80 48-122 82-122s75 42 88 122z" fill="#08234d"/>
+      <rect x="49" y="126" width="82" height="94" rx="30" fill="#ffffff"/>
+      <rect x="-5" y="210" width="208" height="94" rx="15" fill="#fff" stroke="#bdd3ee" stroke-width="4"/>
+      <text x="20" y="242" font-family="Arial" font-size="18" font-weight="700" fill="#0759d6">Recruiter Review</text>
+      <rect x="22" y="260" width="155" height="9" rx="4" fill="#f7c948"/>
+      <rect x="22" y="280" width="130" height="8" rx="4" fill="#d7e6f8"/>
+    </g>
+    <g transform="translate(35,10)">
+      <rect x="0" y="0" width="250" height="310" rx="18" fill="#ffffff" stroke="#bdd3ee" stroke-width="4"/>
+      <text x="28" y="45" font-family="Arial" font-size="22" font-weight="800" fill="#08234d">ATS Resume Summary</text>
+      <rect x="28" y="72" width="190" height="10" rx="5" fill="#0759d6"/>
+      <rect x="28" y="104" width="165" height="10" rx="5" fill="#d7e6f8"/>
+      <rect x="28" y="130" width="190" height="10" rx="5" fill="#d7e6f8"/>
+      <rect x="28" y="156" width="145" height="10" rx="5" fill="#d7e6f8"/>
+      <rect x="28" y="206" width="80" height="30" rx="15" fill="#fff4d2"/>
+      <text x="48" y="227" font-family="Arial" font-size="15" font-weight="800" fill="#8a6400">Skills</text>
+      <rect x="120" y="206" width="90" height="30" rx="15" fill="#eaf4ff"/>
+      <text x="142" y="227" font-family="Arial" font-size="15" font-weight="800" fill="#0759d6">Goal</text>
+    </g>
+  </g>
+  <rect x="845" y="520" width="220" height="42" rx="21" fill="#f7c948"/>
+  <text x="873" y="548" font-family="Arial" font-size="18" font-weight="900" fill="#08234d">CareerPilot AII</text>
+</svg>
