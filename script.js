@@ -135,3 +135,15 @@ if(jdMatchForm){
     $('[data-output]',jdMatchForm).hidden=false;$('[data-output]',jdMatchForm).scrollIntoView({behavior:'smooth'});
   });
 }
+
+const funnelPaths=['/ats-resume-checker/','/interview-questions/','/blog/linkedin-profile-tips-for-freshers/','/quizzes/career-fit/','/tools/resume-job-description-match/'];
+if(funnelPaths.includes(window.location.pathname)){
+  const main=document.querySelector('main');
+  if(main && !document.querySelector('[data-static-funnel-cta]')){
+    const section=document.createElement('section');
+    section.className='section static-funnel-section';
+    section.dataset.staticFunnelCta='true';
+    section.innerHTML=`<div class="container"><div class="cta-card static-funnel-card"><h2>Want to improve your job search faster?</h2><p>Get ready-to-use templates, AI prompts, interview answers, and a 30-day job plan.</p><div class="actions"><a class="btn" href="https://payhip.com/b/X48ki" target="_blank" rel="noopener">Get ₹99 Starter Toolkit</a><a class="btn btn-outline" href="/#choose-toolkit">Get ₹199 Complete Toolkit</a></div></div></div>`;
+    main.appendChild(section);
+  }
+}
