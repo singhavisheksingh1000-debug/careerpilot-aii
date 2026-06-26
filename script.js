@@ -22,7 +22,7 @@ if(homeSlider){
 const store=(key,value)=>localStorage.setItem(key,JSON.stringify(value));
 const get=(key,fallback)=>JSON.parse(localStorage.getItem(key)||JSON.stringify(fallback));
 const cats=s=>s>=8?'Job Ready':s>=5?'Improving':'Beginner';
-const toolkitCta=(title='Want to improve your resume score?')=>`<div class="cta-card"><h3>${title}</h3><p>Use ready ATS templates, LinkedIn prompts, interview answers, and a 30-day job-search system to turn this result into action.</p><div class="actions"><a class="btn" href="https://payhip.com/b/X48ki" target="_blank" rel="noopener">Get ₹99 Starter Toolkit</a><a class="btn btn-outline" href="/#choose-toolkit">Get ₹199 Complete Toolkit</a></div></div>`;
+const toolkitCta=(title='Want to improve your resume score?')=>`<div class="cta-card"><h3>Want to improve your job search faster?</h3><p>Get ready-to-use templates, AI prompts, interview answers, and a 30-day job plan.</p><div class="actions"><a class="btn" href="https://payhip.com/b/X48ki" target="_blank" rel="noopener">Get ₹99 Starter Toolkit</a><a class="btn btn-outline" href="/#choose-toolkit">Get ₹199 Complete Toolkit</a></div></div>`;
 
 const quizTips={Beginner:'Start with the linked guide, take notes, and retry after one focused practice session.',Improving:'You have a solid base. Review the questions you missed and practise two real examples.', 'Job Ready':'Great work. Keep your momentum with a mock interview and share your score.'};
 $$('[data-quiz]').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault();const total=$$('.quiz-question',form).length;let score=0;for(let i=1;i<=total;i++){const answer=form.querySelector(`[name="q${i}"]:checked`);if(answer?.value==='1')score++}const category=cats(score);const title=form.dataset.quiz;store(`careerpilot-${form.dataset.slug}`,{score,total,category,date:new Date().toISOString()});const box=$('.result',form);box.hidden=false;box.innerHTML=`<h3>${category}: ${score}/${total}</h3><p>${quizTips[category]}</p><p><strong>Share your result:</strong> I scored ${score}/${total} (${category}) on the ${title} at CareerPilot AI. Try it free!</p><button type="button" class="btn btn-small" data-copy>Copy result</button> <button type="reset" class="btn btn-outline btn-small">Try Again</button>${toolkitCta('Want a complete career score action plan?')}`;box.scrollIntoView({behavior:'smooth'});$('[data-copy]',box).onclick=()=>navigator.clipboard?.writeText(`I scored ${score}/${total} (${category}) on the ${title} at CareerPilot AI. Try it free!`);box.querySelector('[type=reset]').onclick=()=>{box.hidden=true;localStorage.removeItem(`careerpilot-${form.dataset.slug}`)}}));
@@ -134,4 +134,16 @@ if(jdMatchForm){
     $('[data-output]',jdMatchForm).innerHTML=`<h3>Resume Match Score: ${score}/100</h3><p><strong>Privacy:</strong> Your resume is analyzed only in your browser and is not stored.</p><h4>Matching keywords</h4><p>${matching.length?matching.slice(0,20).join(', '):'No strong keyword overlap found yet.'}</p><h4>Missing keywords</h4><p>${missing.length?missing.join(', '):'Great match — no major keyword gaps detected from the scanned job description.'}</p><h4>Skills gap</h4><p>${skillsGap.length?skillsGap.join(', '):'No major skills gap detected from the top job-description terms.'}</p><h4>ATS improvement suggestions</h4><ul>${suggestions.map(s=>`<li>${s}</li>`).join('')}</ul><h4>Recommended resume summary</h4><p>${summary}</p><h4>Suggested action verbs</h4><p>${actionVerbs.join(', ')}</p>${toolkitCta('Want to improve your resume match score?')}`;
     $('[data-output]',jdMatchForm).hidden=false;$('[data-output]',jdMatchForm).scrollIntoView({behavior:'smooth'});
   });
+}
+
+const funnelPaths=['/ats-resume-checker/','/interview-questions/','/blog/linkedin-profile-tips-for-freshers/','/quizzes/career-fit/','/tools/resume-job-description-match/'];
+if(funnelPaths.includes(window.location.pathname)){
+  const main=document.querySelector('main');
+  if(main && !document.querySelector('[data-static-funnel-cta]')){
+    const section=document.createElement('section');
+    section.className='section static-funnel-section';
+    section.dataset.staticFunnelCta='true';
+    section.innerHTML=`<div class="container"><div class="cta-card static-funnel-card"><h2>Want to improve your job search faster?</h2><p>Get ready-to-use templates, AI prompts, interview answers, and a 30-day job plan.</p><div class="actions"><a class="btn" href="https://payhip.com/b/X48ki" target="_blank" rel="noopener">Get ₹99 Starter Toolkit</a><a class="btn btn-outline" href="/#choose-toolkit">Get ₹199 Complete Toolkit</a></div></div></div>`;
+    main.appendChild(section);
+  }
 }
